@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en_us">
+  <head>
+    <title>On About Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="font-sans bg-grey-lighter p-8">
+    <h1 class="text-center text-grey-darkest tracking-wide">
+      on<span class="text-indigo">about</span>code
+    </h1>
+
+    <div class="bg-white rounded mt-4 border-b-2 border-grey-light p-4">
+      {{ range first 10 .Data.Pages }}
+        <div>
+          <a href="{{ .Permalink }}" class="no-underline">
+            <div class="font-bold text-blue">{{ .Title }} - {{ .Date }}</div>
+            <div class="text-grey-darkest">{{ .Description }}</div>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="bg-white mt-4 p-4 rounded border-b-2 border-grey-light">
+      <div>
+      </div>
+
+      <div class="uppercase font-bold text-sm tracking-wide text-indigo">About me</div>
+
+      <div class="mt-2">
+        I'm a software developer that has worked with web development for past 6 years. I recently got interested in functional languages (such as Elm and Elixir) and natural language processing, and decided to blog about it.
+      </div>
+
+      <div class="mt-2">
+        <a href="https://twitter.com/luizpvasc" class="text-blue">Follow me on twitter</a>
+      </div>
+    </div>
+  </body>
+</html>
