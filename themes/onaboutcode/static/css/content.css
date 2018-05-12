@@ -1,0 +1,14 @@
+.content p {
+    margin-bottom: 1.6rem;
+    line-height: 1.5rem;
+}
+
+.content blockquote {
+    border-left: 3px solid #dfdfdf;
+    padding-left: 1rem;
+    color: #606060;
+}
+
+.content img {
+    border: 1px solid #dfdfdf;
+}

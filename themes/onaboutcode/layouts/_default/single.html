@@ -2,9 +2,22 @@
 <html>
 <head>
   <title>{{ .Title }}</title>
+  <link href="/css/content.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<body class="font-sans bg-grey-lighter p-8">
+    {{ partial "header.html" . }}
+        <div class="bg-white rounded mt-4 border-b-2 border-grey-light p-4">
+            <div class="">
+                <span class="text-2xl font-bold">{{ .Title }}</span>
+                &mdash;
+                <span>{{ dateFormat "Jan 2, 2006" .Date }}</span>
+            </div>
+
+            <div class="content mt-4">
+                {{ .Content }}
+            </div>
+        </div>
+     {{ partial "footer.html" . }}
 </body>
 </html>
