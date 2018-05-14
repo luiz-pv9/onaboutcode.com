@@ -12,3 +12,21 @@
 .content img {
     border: 1px solid #dfdfdf;
 }
+
+.content pre {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background: #dfdfdf;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+.content pre code {
+    color: black;
+}
+
+.content code {
+    font-size: 0.9rem;
+    background: #dfdfdf;
+    color: #a53c10;
+}
